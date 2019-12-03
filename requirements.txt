@@ -1,6 +1,1 @@
-kubernetes
 click
-pygments
-tabulate
-prompt_toolkit
-PyYAML

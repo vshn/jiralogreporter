@@ -2,4 +2,3 @@ include README.md
 include LICENSE
 recursive-exclude * *.py[co]
 include requirements.txt
-include tox.ini

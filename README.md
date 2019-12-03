@@ -1,32 +1,36 @@
 # jiralogreporter
-jiralogreporter is a shell for Kubernetes users and administrators.
+
+Print all JIRA worklog entries updated in the last month
+
+## Requirements:
+Python3.6+
 
 
-[![PyPi](https://img.shields.io/pypi/v/jiralogreporter.svg?style=flat-square)](https://pypi.python.org/pypi/jiralogreporter)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square)](https://github.com/ambv/black)
+## Install from this repository
 
-Planned features:
-
-- Status bar:
-
-- Kubernetes query commands:
-  - [ ] list pods
-  - [X] list namespaces
-  - [X] list nodes
-
-## How to use it
-
-## Run from  the docker image
-```bash
-docker run --privileged -v "$HOME/.kube/config":/app/kube_config -it joaompinto/jiralogreporter
+```sh
+pip3 install --user jiralogreporter
 ```
 
-## Install using Python3.6+
+## Install the stable  release
 
-## How to install
 ```sh
-# Last Release
 pip3 install --user jiralogreporter
-# Development Release
-pip3 install --user https://github.com/joaompinto/jiralogreporter/archive/master.zip
+```
+
+```sh
+## How to use
+
+# Create a JIRA env file
+cat > jira_env << _EOF_
+export JIRA_USERNAME=your_jira_username
+export JIRA_SERVER=your_jira_server
+_EOF_
+
+# Load your env
+source jira_env
+
+# Run the report tool
+jiralogreporter
+
 ```

@@ -68,10 +68,3 @@ target/
 
 # pytest cache
 .pytest_cache/
-
-# gh-pages publishing
-site/
-tmp/
-
-docs/*/actions.md
-.tox/
